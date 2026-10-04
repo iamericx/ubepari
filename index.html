@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f6f8">
+    <meta name="description" content="UBEPARI PC technology for work, business and everyday digital life.">
+    <link rel="canonical" href="https://ubeparipc.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="UBEPARI PC | Technology shapes the future">
+    <meta property="og:description" content="Technology shapes the future. We power the next generation.">
+    <meta property="og:url" content="https://ubeparipc.com/">
+    <title>UBEPARI PC | Technology shapes the future</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/products.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/catalogue.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="home">
+      <a class="brand" href="#home" aria-label="UBEPARI PC home">Ubepari PC</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <button class="search-toggle" type="button" aria-label="Focus product search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          <span>Search</span>
+        </button>
+        <a class="button button-primary nav-cta" href="#contact">Contact UBEPARI <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> UBEPARI PC</p>
+          <h1 id="hero-title">Technology shapes the future.<br><em>We power the next generation.</em></h1>
+          <p class="hero-intro">Explore UBEPARI PC’s computers for work, business and everyday digital life.</p>
+          <a class="button button-primary" href="#products">Explore products <span aria-hidden="true">↗</span></a>
+          <div class="hero-caption"><span class="caption-line"></span><span>Apple MacBook · Dell · HP · Desktop Computers</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-disc" aria-hidden="true"></div>
+          <img src="https://ubeparipc.com/wp-content/uploads/2026/03/Laptops-10.png" alt="Laptop image from UBEPARI PC" fetchpriority="high">
+          <span class="hero-vertical" aria-hidden="true">UBEPARI PC · TECHNOLOGY</span>
+        </div>
+        <div class="hero-index" aria-hidden="true"><strong>01</strong><span>/</span>04</div>
+      </section>
+
+      <section class="product-section section-shell" id="products" aria-labelledby="products-title">
+        <div class="section-heading catalogue-heading">
+          <div>
+            <p class="eyebrow">UBEPARI PC catalogue</p>
+            <h2 id="products-title">Explore technology<br><em>by model family.</em></h2>
+          </div>
+          <p class="section-intro">Browse laptop models by brand. UBEPARI stock and exact configurations are confirmed directly with the team.</p>
+        </div>
+
+        <div class="catalogue-intro-note">
+          <span class="catalogue-note-mark" aria-hidden="true">i</span>
+          <p>Model families are listed for catalogue discovery. Specifications, configurations, availability and pricing may vary. Please contact UBEPARI PC to confirm current stock and specifications.</p>
+        </div>
+
+        <div class="catalogue-tools">
+          <label class="search-box catalogue-search" for="product-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            <input id="product-search" type="search" placeholder="Search brand, model or specs..." autocomplete="off">
+          </label>
+          <label class="catalogue-select-label" for="catalogue-sort">Sort
+            <select id="catalogue-sort"><option value="relevant">A–Z</option><option value="brand">Brand</option></select>
+          </label>
+          <span class="catalogue-count" id="search-status" aria-live="polite"></span>
+        </div>
+
+        <div class="catalogue-filters" role="group" aria-label="Filter by laptop brand" id="brand-filters"></div>
+        <p class="catalogue-data-note">Processor, memory, storage, graphics and display filters will be added when verified configuration data is available.</p>
+        <div class="catalogue-actions">
+          <button class="text-button" id="clear-catalogue-filters" type="button">Clear filters</button>
+          <div class="catalogue-tools-actions">
+            <button class="button button-outline" id="open-finder" type="button">Find your PC</button>
+            <button class="button button-outline" id="open-compare" type="button" disabled>Compare <span id="compare-count">0</span></button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="catalogue-empty" id="search-empty" hidden>
+          <h3>No matching models</h3><p>Try another model name or clear the selected brand filter.</p>
+        </div>
+        <aside class="catalogue-other-category" id="desktop-category" aria-labelledby="desktop-category-title">
+          <div><p class="eyebrow">Also in the UBEPARI catalogue</p><h3 id="desktop-category-title">Desktop Computers</h3><p>Explore the desktop category through the UBEPARI PC website.</p></div>
+          <a class="button button-outline" href="https://ubeparipc.com/" target="_blank" rel="noopener noreferrer">Explore desktops <span aria-hidden="true">↗</span></a>
+        </aside>
+      </section>
+
+      <dialog class="catalogue-dialog" id="product-dialog" aria-labelledby="detail-title">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Close product details">×</button>
+        <div id="product-detail-content"></div>
+      </dialog>
+      <dialog class="catalogue-dialog compare-dialog" id="compare-dialog" aria-labelledby="compare-title">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Close comparison">×</button>
+        <div id="compare-content"></div>
+      </dialog>
+      <dialog class="catalogue-dialog finder-dialog" id="finder-dialog" aria-labelledby="finder-title">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Close PC finder">×</button>
+        <div id="finder-content"></div>
+      </dialog>
+      <section class="company-section" id="about" aria-labelledby="about-title">
+        <div class="company-hero">
+          <p class="eyebrow eyebrow-light">ABOUT UBEPARI PC</p>
+          <h2 id="about-title">We Stand with Our Customers, Inspire the Industry, and Empower Our Employees.</h2>
+        </div>
+
+        <div class="company-story">
+          <div class="company-image">
+            <img src="erick.jpg" alt="Erick, the founder of UBEPARI PC" loading="lazy" decoding="async">
+            <span class="company-image-caption">UBEPARI PC · FOUNDER </span>
+          </div>
+          <article class="company-story-copy" aria-labelledby="story-title">
+            <p class="eyebrow">OUR STORY</p>
+            <h3 id="story-title">Our Story</h3>
+            <p class="story-subtitle">Erick Started It, We Perfect It, You Benefit.</p>
+            <p>Our journey began with Erick, a Doctor of Medicine with a vision beyond the white coat. While the world expected him to follow a traditional path in healthcare, he chose to pursue his passion for technology and entrepreneurship. What started as a small laptop business in 2020 while still in university has grown into Ubepari PC, a company dedicated to providing high-performance computers, empowering customers, and inspiring the tech industry in Tanzania and beyond.</p>
+          </article>
+        </div>
+
+        <article class="company-mission" aria-labelledby="mission-title">
+          <div class="mission-heading"><p class="eyebrow eyebrow-light">OUR MISSION</p><h3 id="mission-title">Our Mission</h3></div>
+          <p>At Ubepari PC, our mission is simple: to empower our customers with reliable, high-performance technology, inspire innovation in the tech industry, and create a culture where our team can thrive. We are committed to delivering computers and solutions that make a difference in people’s lives, whether for work, study, or creativity.</p>
+        </article>
+
+        <section class="company-values" aria-labelledby="values-title">
+          <div class="values-heading"><p class="eyebrow eyebrow-light">WHAT GUIDES US</p><h3 id="values-title">Our Values</h3></div>
+          <div class="values-grid">
+            <article class="value-card"><span aria-hidden="true">01</span><h4>Customer First</h4><p>We design our products and services around the needs of our customers.</p></article>
+            <article class="value-card"><span aria-hidden="true">02</span><h4>Innovation</h4><p>We push the boundaries of technology and set new standards for quality.</p></article>
+            <article class="value-card"><span aria-hidden="true">03</span><h4>Integrity</h4><p>We conduct business transparently, ethically, and responsibly.</p></article>
+            <article class="value-card"><span aria-hidden="true">04</span><h4>Passion</h4><p>We approach everything we do with enthusiasm, energy, and dedication to making a difference.</p></article>
+            <article class="value-card"><span aria-hidden="true">05</span><h4>Empowerment</h4><p>We believe in supporting our employees, enabling them to grow, innovate, and excel.</p></article>
+            <article class="value-card"><span aria-hidden="true">06</span><h4>Excellence</h4><p>Every PC we sell, every service we provide, reflects our commitment to quality and performance.</p></article>
+          </div>
+        </section>
+      </section>
+      <section class="testimonial-section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="testimonial-inner">
+          <div class="section-heading testimonial-heading">
+            <div><p class="eyebrow">WHAT OUR CUSTOMERS SAY</p><h2 id="testimonials-title">Trusted by people who choose <em>better technology.</em></h2></div>
+            <div class="rating-summary"><span aria-label="5 out of 5 stars">★★★★★</span><p>Real feedback from people who trust UBEPARI</p></div>
+          </div>
+          <div class="testimonial-carousel" aria-label="Customer testimonials" aria-roledescription="carousel">
+            <div class="testimonial-viewport" id="testimonial-viewport" tabindex="0" aria-describedby="testimonial-status">
+              <div class="testimonial-track" id="testimonial-track">                <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 1 of 5"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“UBEPARI PCs completely transformed the way I manage my business. Everything runs faster, smoother, and more efficiently than ever. Truly reliable machines for professionals like me.”</blockquote><div class="reviewer"><span class="reviewer-mark" aria-hidden="true">AK</span><p><strong>Ahmed K</strong><small>Entrepreneur</small></p></div></article>
+                <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 2 of 5"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Using UBEPARI PCs for my studies and projects is perfect. No lag, no stress, and fully dependable every day. These systems make learning and research effortless and productive.”</blockquote><div class="reviewer"><span class="reviewer-mark" aria-hidden="true">SM</span><p><strong>Sarah M</strong><small>University Student</small></p></div></article>
+                <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 3 of 5"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Editing videos, graphics, and designs is now effortless. UBEPARI PCs handle everything I throw at them with speed, accuracy, and reliability. Every creative task is smoother and faste…”</blockquote><div class="reviewer"><span class="reviewer-mark" aria-hidden="true">DT</span><p><strong>Daniel T</strong><small>Content Creator</small></p></div></article>
+                <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 4 of 5"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“I rely on UBEPARI PCs every single day for my business. They are fast, reliable, and trustworthy. No downtime, no errors — just seamless performance I can always depend o…”</blockquote><div class="reviewer"><span class="reviewer-mark" aria-hidden="true">FA</span><p><strong>Fatima A</strong><small>Small Business Owner</small></p></div></article>
+                <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 5 of 5"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“UBEPARI PCs are fast, secure, and powerful. Exactly what I need to complete work efficiently, on time, and professionally. These machines never fail to meet every demand I have.”</blockquote><div class="reviewer"><span class="reviewer-mark" aria-hidden="true">JL</span><p><strong>James L.</strong><small>Photographer</small></p></div></article>
+              </div>
+            </div>
+            <div class="carousel-controls" aria-label="Testimonial navigation">
+              <button class="carousel-arrow" id="testimonial-previous" type="button" aria-label="Previous testimonials"><span aria-hidden="true">←</span></button>
+              <div class="carousel-dots" id="testimonial-dots" aria-label="Choose testimonial page"></div>
+              <button class="carousel-arrow" id="testimonial-next" type="button" aria-label="Next testimonials"><span aria-hidden="true">→</span></button>
+            </div>
+            <p class="sr-only" id="testimonial-status" aria-live="polite" aria-atomic="true"></p>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-inner">
+          <div class="contact-heading">
+            <p class="eyebrow">CONTACT UBEPARI</p>
+            <h2 id="contact-title">Let's find the right<br><em>technology for you.</em></h2>
+            <p class="contact-intro">Tell us what you're looking for and our team can help you find the right option.</p>
+            <p class="contact-tagline">Anyone Can Own A Laptop</p>
+          </div>
+
+          <div class="contact-layout">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="contact-form-grid">
+                <div class="form-field">
+                  <label for="contact-name">Full name <span aria-hidden="true">*</span></label>
+                  <input id="contact-name" name="name" type="text" placeholder="Your full name" autocomplete="name" required aria-describedby="name-error">
+                  <span class="field-error" id="name-error" aria-live="polite" aria-atomic="true"></span>
+                </div>
+                <div class="form-field">
+                  <label for="contact-phone">Phone number <span aria-hidden="true">*</span></label>
+                  <input id="contact-phone" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel" inputmode="tel" required aria-describedby="phone-error">
+                  <span class="field-error" id="phone-error" aria-live="polite" aria-atomic="true"></span>
+                </div>
+                <div class="form-field">
+                  <label for="contact-interest">What are you looking for? <span aria-hidden="true">*</span></label>
+                  <select id="contact-interest" name="interest" required aria-describedby="interest-error">
+                    <option value="">Choose an option</option><option>Laptop</option><option>Desktop</option><option>Accessories</option><option>Business solution</option><option>Other</option>
+                  </select>
+                  <span class="field-error" id="interest-error" aria-live="polite" aria-atomic="true"></span>
+                </div>
+                <div class="form-field">
+                  <label for="contact-brand">Preferred brand</label>
+                  <select id="contact-brand" name="brand">
+                    <option value="">No preference</option><option>Apple</option><option>Dell</option><option>HP</option><option>Lenovo</option><option>ASUS</option><option>Acer</option><option>Other</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="contact-budget">Budget <span class="optional-label">Optional</span></label>
+                  <select id="contact-budget" name="budget">
+                    <option value="">Choose if known</option><option>Not sure yet</option><option>Under TZS 500,000</option><option>TZS 500,000 – 1,000,000</option><option>TZS 1,000,000 – 2,000,000</option><option>TZS 2,000,000 – 3,000,000</option><option>Above TZS 3,000,000</option>
+                  </select>
+                  <span class="budget-note">Budget ranges are enquiry categories only; they do not indicate current product availability.</span>
+                </div>
+                <div class="form-field form-field-message">
+                  <label for="contact-message">Message <span class="optional-label">Optional</span></label>
+                  <textarea id="contact-message" name="message" rows="4" placeholder="Tell us what you need..."></textarea>
+                </div>
+              </div>
+              <button class="button button-primary contact-submit" type="submit">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.2 8.2 0 0 1-12.1 7.2L4 20l1.1-4.1a8.2 8.2 0 1 1 15.4-4.2Z"></path><path d="M8.8 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.2 1.5 2.1 1.9.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.6-.5.4-1.1.6-1.8.5-1.2-.2-2.7-.9-4.2-2.3-1.2-1.1-2-2.5-2.2-3.4-.2-.8 0-1.6.4-2.2Z"></path></svg>
+                Continue to WhatsApp <span aria-hidden="true">↗</span>
+              </button>
+              <div class="contact-success" id="contact-success" role="status" aria-live="polite" hidden>
+                <strong>Your enquiry is ready in WhatsApp.</strong>
+                <span>Complete the message in WhatsApp to contact UBEPARI PC.</span>
+              </div>
+            </form>
+
+            <aside class="contact-details" aria-label="UBEPARI PC contact information">
+              <p class="eyebrow eyebrow-light">HERE TO HELP</p>
+              <h3>UBEPARI PC</h3>
+              <div class="contact-detail-item"><span class="contact-detail-icon" aria-hidden="true">⌖</span><p>Magomeni Mapipa,<br>Tanzania</p></div>
+              <div class="contact-detail-item"><span class="contact-detail-icon" aria-hidden="true">☎</span><p>Call / WhatsApp<br><strong>0683491481</strong></p></div>
+              <div class="contact-detail-actions">
+                <a class="button button-light" href="tel:+255683491481">Call UBEPARI</a>
+                <a class="button button-contact-whatsapp" href="https://wa.me/255683491481" target="_blank" rel="noopener noreferrer">WhatsApp UBEPARI <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="closing-banner">
+        <div><p class="eyebrow eyebrow-light">UBEPARI PC</p><h2>Technology shapes the future.<br><em>We power the next generation.</em></h2></div>
+        <a class="button button-light">Visit UBEPARI PC <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand"><a class="brand brand-footer" href="#home">Ubepari PC</a><p>Technology shapes the future.<br>We power the next generation.</p></div>
+        <div class="footer-column"><h2>Our Offerings</h2><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Services</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Products</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Solutions</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Product Security</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Artificial Intelligence</span></div>
+        <div class="footer-column"><h2>Ways to buy</h2><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Shop online</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Call an UBEPARI rep</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Enterprise store</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Pricing</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Public sector purchasing</span></div>
+        <div class="footer-column"><h2>About</h2><a href="#about">About Us</a><a href="#contact">Contact UBEPARI</a><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Privacy Centre</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Terms &amp; Condition</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">FAQ</span><span class="footer-link-pending" data-destination-pending="Add verified UBEPARI URL">Newsroom</span></div>
+        <div class="footer-column footer-connect"><h2>Connect with Us</h2><span class="footer-link-pending" data-destination-pending="Add verified social profile URL">Facebook</span><span class="footer-link-pending" data-destination-pending="Add verified social profile URL">Instagram</span><span class="footer-link-pending" data-destination-pending="Add verified social profile URL">X/Twitter</span><span class="footer-link-pending" data-destination-pending="Add verified social profile URL">LinkedIn</span></div>
+      </div>
+      <div class="footer-bottom"><span>Copyright © 2026 UBEPARI PC. All rights reserved</span><a href="#home">Back to top ↑</a></div>
+    </footer>
+  </body>
+</html>
